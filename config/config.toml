@@ -1,0 +1,7 @@
+reduced_motion = false
+
+[dito]
+command = "dito"
+# root = "/absolute/path/to/Dito"
+# adapter = "/absolute/path/to/island-adapter.mjs"
+timeout_seconds = 120

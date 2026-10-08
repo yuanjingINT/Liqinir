@@ -1,0 +1,15 @@
+// Add this file with: include "../Liqninr/niri/liqinir-glass.kdl"
+// Xray blur reuses niri's blurred wallpaper and is cheap while idle.
+layer-rule {
+    match namespace="^liqinir-island$"
+    // The layer is a full-width status bar; the center capsule owns its own
+    // rounded corners in shell.qml.
+    geometry-corner-radius 0
+    opacity 1.0
+    background-effect {
+        blur true
+        xray true
+        saturation 1.22
+        noise 0.018
+    }
+}

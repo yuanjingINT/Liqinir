@@ -1,0 +1,19 @@
+[Unit]
+Description=Liqinir Rust event core and glass island state daemon
+PartOf=niri.service
+After=niri.service
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/liqinir daemon
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=%t/liqinir %h/.local/state/liqinir %h/.pi %h/.config
+MemoryDenyWriteExecute=true
+UMask=0077
+
+[Install]
+WantedBy=default.target

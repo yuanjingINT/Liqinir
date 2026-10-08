@@ -1,0 +1,15 @@
+[Unit]
+Description=Liqinir liquid glass Dynamic Island UI
+PartOf=niri.service
+After=liqinir.service niri.service
+Requires=liqinir.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/quickshell -p %h/.config/quickshell/liqinir/shell.qml
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target

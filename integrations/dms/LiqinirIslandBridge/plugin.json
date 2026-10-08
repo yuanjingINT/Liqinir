@@ -1,0 +1,12 @@
+{
+  "id": "liqinirIslandBridge",
+  "name": "Liqinir Island Bridge",
+  "description": "Forward DMS notifications to the Rust-powered Liqinir glass island.",
+  "version": "0.1.0",
+  "license": "GPL-3.0-only",
+  "author": "Liqinir",
+  "icon": "island",
+  "type": "daemon",
+  "component": "./LiqinirIslandBridge.qml",
+  "permissions": []
+}

@@ -1,0 +1,11 @@
+id = "liqinir/island"
+name = "Liqinir Island"
+version = "0.1.0"
+plugin_api = 32
+author = "Liqinir"
+license = "GPL-3.0-only"
+description = "将 Liqinir 的事件状态显示为 Noctalia 顶栏中央的液态玻璃胶囊。"
+
+[[widget]]
+id = "island"
+entry = "island.luau"

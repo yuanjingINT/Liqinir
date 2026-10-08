@@ -1,0 +1,8 @@
+/target/
+/references/
+/artifacts/
+*.sock
+.env
+config/local.toml
+*.qcow2
+*.pid
