@@ -28,6 +28,16 @@ cd Liqinir
 liqinir emit '{"kind":"notification","title":"测试消息","body":"液态玻璃已启动"}'
 ```
 
+### Kitty 液态玻璃
+
+Kitty 的玻璃效果由 compositor 绘制：终端背景半透明并模糊桌面，文字和光标保持不透明，圆角和细高光边框由 niri 绘制。安装只追加独立配置，不会覆盖 Kitty 的配色或快捷键：
+
+```bash
+./scripts/install-kitty-glass.sh
+```
+
+安装脚本会在 `~/.local/state/liqinir/backups/` 保存 Kitty 和 niri 的原配置。关闭并重新打开 Kitty 后生效；`Ctrl+Shift+A` 后按 `m` / `l` 可以临时调整透明度。
+
 点击顶栏胶囊会打开 Dito 原生终端，继续使用它的权限门和确认流程。状态栏 widget 受 Noctalia 的单行 bar 高度约束；有消息时黑色胶囊会在顶栏内横向展开，显示标题和正文，消息结束后自动恢复紧凑状态，不会创建覆盖应用内容的独立窗口。
 
 这是早期版本，已在当前 Arch Linux / niri / Noctalia 环境验证。桌面通知目前通过 DMS bridge 转发，需启用该插件并运行 DMS；仅运行 Noctalia 时，网络、电源、设备、解锁与 Dito 事件仍可显示。`niri/liqinir-glass.kdl` 使用支持 blur/xray 的 niri 构建；安装前请确认你的构建支持其中的 layer-rule 参数。

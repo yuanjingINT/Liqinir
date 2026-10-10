@@ -1,0 +1,36 @@
+// Liqinir · Kitty liquid-glass window surface
+// Included after generated Noctalia rules; it matches Kitty only.
+window-rule {
+    match app-id="kitty"
+    geometry-corner-radius 24
+    clip-to-geometry true
+    opacity 1.0
+
+    // A slim highlight gives the glass a readable edge without covering tabs.
+    border {
+        on
+        width 1
+        active-gradient from="#ffffff99" to="#b8d9ff30" angle=135
+        inactive-gradient from="#ffffff35" to="#b8d9ff12" angle=135
+    }
+
+    focus-ring {
+        off
+    }
+
+    shadow {
+        on
+        softness 32
+        spread 2
+        offset x=0 y=8
+        color "#00000055"
+        draw-behind-window false
+    }
+
+    background-effect {
+        blur true
+        xray false
+        saturation 1.16
+        noise 0.012
+    }
+}
